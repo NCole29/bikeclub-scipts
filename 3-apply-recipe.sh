@@ -3,7 +3,9 @@
 # This script should be stored and run from the sites folder with the command:
 # ./3-apply-recipe.sh
 
-read -p "Enter project folder name: " folder
+# include.sh reads project.txt, asks for confirmation, and resets project folder if needed. 
+source include.sh
+
 read -p "Enter recipe name: bikeclub-" recipe
 
 cd $folder
@@ -25,3 +27,4 @@ ddev drush cr
 echo '<----------- Job completed -------------->'
 echo ' Refresh your browser. If the site returns an error:'
 echo '  - Go to the project folder in your terminal window and clear the cache: ddev drush cr'
+

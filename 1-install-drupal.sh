@@ -1,6 +1,8 @@
 #!/bin/bash
 
-read -p "Enter project folder name: " folder
+# include.sh reads project.txt, asks for confirmation, and resets project folder if needed. 
+source include.sh
+
 mkdir $folder
 cd $folder
 
@@ -48,14 +50,13 @@ ddev composer require drush/drush
 # Successfully installing a recipe requires the site be installed.  
 # For minimal configuration collisions it may be optimal to use the minimal install profile.
 
-# Install Drupal with Minimal profile.
+# Install Drupal Minimal profile. Username = admin, pswd = 123
 echo '<----------- Install Drupal with Minimal profile ------------------------------->'
 echo 'Provide administrator login credentials'
-read -p "Site name: " sitename
 read -p "Admin email: " email
 read -p "Admin password: " pswd
 
-ddev drush si minimal --site-name=$sitename --account-name=admin --account-mail=$email --account-pass=$pswd -y
+ddev drush si minimal --site-name=$folder --account-name=admin --account-mail=$email --account-pass=$pswd -y
 
 echo '<----------- Clearing cache ------------------------------------>'
 ddev drush cr

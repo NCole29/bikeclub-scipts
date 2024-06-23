@@ -2,11 +2,13 @@
 
 # Source: https://docs.civicrm.org/installation/en/latest/drupal/
 
-read -p "Enter project folder name: " folder
+# include.sh reads project.txt, asks for confirmation, and resets project folder if needed. 
+source include.sh
+
 cd $folder
 
 # Uninstall Drush.
-echo '<--------- Uninstall Drush due to symfony conflicts with CiviCRM. Will reinstall later. ------->'
+echo '<--------- Uninstall Drush due to symfony comflicts with CiviCRM. Will reinstall later. ------->'
 ddev composer remove drush/drush
 
 # Require CiviCRM.
