@@ -10,7 +10,7 @@ Download the scripts and copy them to the **sites** folder in your local develop
 Open a terminal window (e.g., the terminal in VS Code), navigate to the sites folder, and issue the following commands:
  
 	./1-install-drupal.sh
-	 ./2-install-civicrm.sh
+	./2-install-civicrm.sh
 
 Note: "./" must precede the file name to indicate that the script is in the current folder.	
 
