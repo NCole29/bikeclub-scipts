@@ -1,14 +1,13 @@
 #!/bin/bash
 
 # This script should be stored and run from the sites folder with the command:
-# ./3-apply-recipe.sh
+# ./apply-recipe.sh
 
 # include.sh reads project.txt, asks for confirmation, and resets project folder if needed. 
 source include.sh
+cd $folder
 
 read -p "Enter recipe name: bikeclub-" recipe
-
-cd $folder
 
 # Add bikeclub recipe repository to composer.json.
 echo '<----------- Add recipe repository to composer.json -------------->'

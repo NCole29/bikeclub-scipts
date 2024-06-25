@@ -1,6 +1,9 @@
 #!/bin/bash
 
-cd recipe-test
+
+# include.sh reads project.txt, asks for confirmation, and resets project folder if needed. 
+source include.sh
+cd $folder
 
 echo 'Databases available for import are identified by subfoders under tmp/'
 read -p 'Enter database (minimal, civicrm, or other): ' db
