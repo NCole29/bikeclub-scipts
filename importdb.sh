@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # include.sh reads project.txt, asks for confirmation, and resets project folder if needed. 
 source include.sh
 cd $folder
